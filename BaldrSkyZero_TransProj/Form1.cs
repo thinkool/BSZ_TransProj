@@ -250,10 +250,18 @@ namespace BaldrSkyZero_TransProj
                                     byteArray.Add(Convert.ToByte(ec, 16));
                                 }
                                 var str = unicode.GetString(byteArray.ToArray());
+                                int ind = 0;
+                                ind = str.IndexOf('\n');
+                                var newStr = strs[ptStrs++];
+                                while(ind != -1)
+                                {
+                                    newStr += "\n" + strs[ptStrs++];
+                                    ind = str.IndexOf('\n', ind + 1);
+                                }
                                 var newline = new StringBuilder();
-                                var ind = line.IndexOf("(");
-                                newline.Append(line.Substring(0, ind + 1));
-                                var newbytes = unicode.GetBytes(strs[ptStrs++]);
+                                var ind2 = line.IndexOf("(");
+                                newline.Append(line.Substring(0, ind2 + 1));
+                                var newbytes = unicode.GetBytes(newStr);
                                 int curInd = 0;
                                 while (curInd < newbytes.Length)
                                 {
