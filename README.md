@@ -34,7 +34,7 @@
   
 ## 操作流程
 
-###剧本提取
+### 剧本提取
 
 - 使用NETFX 4.6.1 Tools的【ildasm】打开【bsz_Data/Managed/Assembly-CSharp.dll】，自动对其反编译，并将其转储为【bsz_Data/Managed/Assembly-CSharp.il】
 
@@ -42,7 +42,7 @@
 
 - 使用本项目工具，【导出-剧本字符串导出】，打开【bsz_Data/Managed/Assembly-CSharp.txt】，自动将其提取到【bsz_Data/Managed/msg】文件夹以及【bsz_Data/Managed/string.txt】文件
 
-###脚本代码修改
+### 脚本代码修改
 
 - 需要对il脚本文件做一处修改，来匹配稍后的字库修改工作：
 
@@ -76,7 +76,7 @@
   } // end of method UIFont::get_uvRect
 ```
 
-###剧本导入
+### 剧本导入
 
 - 使用本项目工具，【导入-剧本字符串导入】，打开【bsz_Data/Managed/Assembly-CSharp.txt】，自动将【bsz_Data/Managed/msg】文件夹以及【bsz_Data/Managed/string.txt】文件导入其中
 
@@ -88,11 +88,11 @@
 ilasm.exe Assembly-CSharp.il /dll /output:Assembly-CSharp.dll
 ```
 
-###图片导出
+### 图片导出
 
 - 使用【AssetStudioGUI】，载入文件【bsz_Data/resources.assets】，【Export-All assets】提取到合适的文件夹
 
-###字库文件导入
+### 字库文件导入
 
 - 使用【AssetBundleExtractor】，打开【bsz_Data/sharedassets3.assets】，选择Path ID为118的MonoBehaviour，用【Import Raw】替换成【FOT_NewRodinPro_B_26_Out23-sharedassets3o.assets-26.dat】
 
@@ -100,10 +100,10 @@ ilasm.exe Assembly-CSharp.il /dll /output:Assembly-CSharp.dll
 
 - 下接图片导入部分操作，完成后保存assets。
 
-###图片导入
+### 图片导入
 
 - 使用【AssetBundleExtractor】，打开【bsz_Data/resources.assets】，选择对应的Texture2D的Assets，用【Plugins-Edit-Load Texture】来进行替换图片，全部替换完毕后保存。
 
-###字符串导出与导入
+### 字符串导出与导入
 
 - 待补充
