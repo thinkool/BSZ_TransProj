@@ -10,7 +10,7 @@
 
 - BSZ将老的NeXAS引擎嵌入到U3D引擎之中，文本分布变得十分零散，所以需要找出来分别进行处理。
 
-## 文本图片的大致分布
+## 文本和图片的大致分布
 
 - bsz_Data/Managed/Assembly-CSharp.dll
 
@@ -94,9 +94,9 @@ ilasm.exe Assembly-CSharp.il /dll /output:Assembly-CSharp.dll
 
 ###字库文件导入
 
-- 使用【AssetBundleExtractor】，打开【bsz_Data/resources.assets】，选择Path ID为118的MonoBehaviour，用【Import Raw】替换成【FOT_NewRodinPro_B_26_Out23-sharedassets3o.assets-26.dat】
+- 使用【AssetBundleExtractor】，打开【bsz_Data/sharedassets3.assets】，选择Path ID为118的MonoBehaviour，用【Import Raw】替换成【FOT_NewRodinPro_B_26_Out23-sharedassets3o.assets-26.dat】
 
-- 选择Path ID为10的Material【FOT_NewRodinPro_B_26_Out23】，用【Plugins-Edit-Load Texture】替换成新的字库图片【FOT_NewRodinPro_B_26_Out23-sharedassets3o.assets-26.png】
+- 选择Path ID为26的Texture2D【FOT_NewRodinPro_B_26_Out23】，用【Plugins-Edit-Load Texture】替换成新的字库图片【FOT_NewRodinPro_B_26_Out23-sharedassets3o.assets-26.png】
 
 - 下接图片导入部分操作，完成后保存assets。
 
